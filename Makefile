@@ -316,7 +316,7 @@ release:
 release-%:
 	@make release-real BUILD_TYPE="$*"
 
-release-real: build
+release-real:
 	@make check-config BUILD_TYPE=$(BUILD_TYPE)
 	@echo "# Gearbox[$(IMAGE_NAME):$(VERSION)]: Full release cycle."
 
