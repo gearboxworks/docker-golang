@@ -1,0 +1,39 @@
+#!/bin/bash
+
+check_image()
+{
+	VERSION="gearboxworks/golang:${REQVERS}"
+	EXISTS="$(docker images -q ${VERSION} 2>/dev/null)"
+
+	if [ "$EXISTS" == "" ]
+	then
+		wget -q -O /dev/null https://index.docker.io/v1/repositories/gearboxworks/golang/tags/$REQVERS
+		if [ "$?" == "0" ]
+		then
+			echo "Gearbox: Need to retrieve $VERSION from repository. Please wait..."
+			${DOCKER} pull $VERSION
+		else
+			echo "Gearbox: ERROR: Version $VERSION doesn't exist in repository."
+			exit
+		fi
+	fi
+}
+
+DOCKER="$(which docker)"
+DIR="$(dirname $0)"
+SCRIPT="$(basename $0)"
+REQVERS="$(echo $SCRIPT | sed -E 's/go-([0-9]*\.[0-9]*)/\1/')"
+EXEC="${DIR}/go-${REQVERS}"
+
+if [ -x "$EXEC" ]
+then
+	check_image
+elif [ "$SCRIPT" == "$REQVERS" ]
+then
+	REQVERS="latest"
+	check_image
+fi
+
+# exec ${DOCKER} run --rm -it --name "golang-$REQVERS" --user gearbox:gearbox --volume ${PROJECT_ROOT}:/project ${VERSION} go "$@"
+ssh -p $(${DOCKER} port golang-${REQVERS} 22/tcp | sed 's/0.0.0.0://') gearbox@localhost go
+

@@ -1,0 +1,16 @@
+{
+	"state": "production",
+	"organization": "gearboxworks",
+	"name": "apache",
+	"version": "1.0.1",
+	"majorversion": "",
+	"latest": "1",
+	"class": "webserver",
+	"network": "--network gearboxnet",
+	"ports": "-P",
+	"volumes": "",
+	"restart": "--restart no",
+	"args": "",
+	"env": "TEMPLATE_VERSION"
+}
+
