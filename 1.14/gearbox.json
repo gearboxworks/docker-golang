@@ -17,7 +17,7 @@
 	},
 	"refurl": "https://www.golang.org/",
 	"versions": {
-		"1.14.0": {
+		"1.14": {
 			"majorversion": "1.14",
 			"latest": true,
 			"ref": "",

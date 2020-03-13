@@ -17,8 +17,8 @@
 	},
 	"refurl": "https://www.golang.org/",
 	"versions": {
-		"1.14.0": {
-			"majorversion": "1.14",
+		"1.14": {
+			"majorversion": "",
 			"latest": true,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
