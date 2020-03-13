@@ -22,6 +22,9 @@ then
 	mkdir -p /usr/local/bin; checkExit
 fi
 
+set 
+env
+
 URL="https://dl.google.com/go/go${VERSION}.linux-amd64.tar.gz"
 c_info "Fetching from $URL"
 cd /usr/local
