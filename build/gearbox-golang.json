@@ -1,36 +1,39 @@
 {
-	"state": "production",
-	"organization": "gearboxworks",
-	"name": "golang",
-	"maintainer": "Gearbox Team <team@gearbox.works>",
-	"class": "dev",
-	"network": "--network gearboxnet",
-	"ports": [
-		"443",
-		"80"
-	],
-	"volumes": "",
-	"restart": "--restart no",
-	"args": "",
-	"env": {
-		"GOLANG_USER": "gearbox"
+	"schema": "gear-1",
+	"meta": {
+		"state": "production",
+		"organization": "gearboxworks",
+		"name": "golang",
+		"label": "Golang",
+		"maintainer": "Gearbox Team <team@gearbox.works>",
+		"class": "dev",
+		"refurl": "https://www.golang.org/"
 	},
-	"refurl": "https://www.golang.org/",
+	"build": {
+		"ports": {
+
+			"https": "443",
+			"http": "80"
+		},
+		"run": "",
+		"args": "",
+		"env": {
+
+			"GOLANG_USER": "gearbox"
+		},
+		"network": "--network gearboxnet",
+		"volumes": "",
+		"restart": "--restart no"
+	},
+	"run": {
+	},
+	"project": {
+	},
+	"extensions": {
+	},
 	"versions": {
-		"1.14.0": {
-			"majorversion": "1.14",
-			"latest": true,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.13.8": {
-			"majorversion": "1.13",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.12.17": {
-			"majorversion": "1.12",
+		"1.10.8": {
+			"majorversion": "1.10",
 			"latest": false,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
@@ -41,44 +44,26 @@
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
-		"1.10.8": {
-			"majorversion": "1.10",
+		"1.12.17": {
+			"majorversion": "1.12",
 			"latest": false,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
-		"1.9.7": {
-			"majorversion": "1.9",
+		"1.13.8": {
+			"majorversion": "1.13",
 			"latest": false,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
-		"1.8.7": {
-			"majorversion": "1.8",
-			"latest": false,
+		"1.14": {
+			"majorversion": "",
+			"latest": true,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
-		"1.7.6": {
-			"majorversion": "1.7",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.6.4": {
-			"majorversion": "1.6",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.5.4": {
-			"majorversion": "1.5",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.4.3": {
-			"majorversion": "1.4",
+		"1.2.2": {
+			"majorversion": "1.2",
 			"latest": false,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
@@ -89,11 +74,42 @@
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
-		"1.2.2": {
-			"majorversion": "1.2",
+		"1.4.3": {
+			"majorversion": "1.4",
 			"latest": false,
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		}
+		},
+		"1.5.4": {
+			"majorversion": "1.5",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.6.4": {
+			"majorversion": "1.6",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.7.6": {
+			"majorversion": "1.7",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.8.7": {
+			"majorversion": "1.8",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.9.7": {
+			"majorversion": "1.9",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"": {}
 	}
 }

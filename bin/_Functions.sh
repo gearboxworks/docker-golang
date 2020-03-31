@@ -28,6 +28,8 @@ then
 	GB_NAME="$(${GB_BINFILE} -json ${GB_JSONFILE} -template-string '{{ .Json.meta.name }}')"
 fi
 
+GB_BASE="$(${GB_BINFILE} -json gearbox.json -template-string '{{ .Json.build.base }}')"
+
 GITBIN="$(which git)"
 GB_GITURL="$(${GITBIN} config --get remote.origin.url)"
 if [ "${GB_GITURL}" == "" ]
@@ -195,7 +197,14 @@ gb_create-build() {
 	fi
 
 	${GB_BINFILE} -template ./TEMPLATE/README.md.tmpl -json ${GB_JSONFILE} -out README.md
-	cp "${GB_JSONFILE}" build/
+
+	cp ./TEMPLATE/Makefile .
+	if [ "${GB_BASE}" == "true" ]
+	then
+		cp "${GB_JSONFILE}" build/
+	else
+		cp "${GB_JSONFILE}" "build/gearbox-${GB_NAME}.json"
+	fi
 
 	return 0
 }
@@ -222,7 +231,7 @@ gb_create-version() {
 			p_info "${FUNCNAME[0]}" "Creating version directory \"${GB_VERSION}\"."
 			cp -i TEMPLATE/version.sh.tmpl .
 			${GB_BINFILE} -json ${GB_JSONFILE} -create version.sh.tmpl -shell
-			rm -f version.sh.tmpl version.sh
+			rm -f version.sh.tmpl version.sh "${GB_VERSION}/gearbox.json"
 		fi
 	done
 
