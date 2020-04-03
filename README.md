@@ -1,4 +1,4 @@
-![Gearbox](https://raw.githubusercontent.com/gearboxworks/gearboxworks.github.io/master/assets/images/gearbox-logo.png)
+![Gearbox](https://gearboxworks.github.io/assets/images/gearbox-logo.png)
 
 
 # golang Docker container service for [Gearbox](https://github.com/gearboxworks/)
@@ -77,9 +77,9 @@ Create, and start the golang Gearbox container. Run a shell.
 
 `./bin/gb-launch -gb-name golang -gb-shell`
 
-Create, and start the golang Gearbox container with version 1.4.3 and run a shell.
+Create, and start the golang Gearbox container with version 1.8.7 and run a shell.
 
-`./bin/gb-launch -gb-name golang -gb-version 1.4.3 -gb-shell`
+`./bin/gb-launch -gb-name golang -gb-version 1.8.7 -gb-shell`
 
 If golang is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
 
@@ -89,18 +89,18 @@ Running golang Gearbox container default command. If a container has a default i
 
 `./bin/golang -flag1 -flag2 variable`
 
-`./bin/gb-launch -gb-name golang -gb-version 1.4.3 -flag1 -flag2 variable`
+`./bin/gb-launch -gb-name golang -gb-version 1.8.7 -flag1 -flag2 variable`
 
 
 Running alternate commands within the golang Gearbox container.
 
 `./bin/golang -gb-shell -- ls -l`
 
-`./bin/gb-launch -gb-name golang -gb-version 1.4.3 -gb-shell -- ls -l`
+`./bin/gb-launch -gb-name golang -gb-version 1.8.7 -gb-shell -- ls -l`
 
 `./bin/golang -gb-shell -- ps -eaf`
 
-`./bin/gb-launch -gb-name golang -gb-version 1.4.3 -gb-shell -- ps -eaf`
+`./bin/gb-launch -gb-name golang -gb-version 1.8.7 -gb-shell -- ps -eaf`
 
 
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
