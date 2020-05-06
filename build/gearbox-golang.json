@@ -26,42 +26,16 @@
 		"restart": "--restart no"
 	},
 	"run": {
+		"commands": {
+			"default": "go",
+			"go": "go"
+		}
 	},
 	"project": {
 	},
 	"extensions": {
 	},
 	"versions": {
-		"1.10.8": {
-			"majorversion": "1.10",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.11.13": {
-			"majorversion": "1.11",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.12.17": {
-			"majorversion": "1.12",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.13.8": {
-			"majorversion": "1.13",
-			"latest": false,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
-		"1.14": {
-			"majorversion": "",
-			"latest": true,
-			"ref": "",
-			"base": "gearboxworks/gearbox-base:alpine-3.11"
-		},
 		"1.2.2": {
 			"majorversion": "1.2",
 			"latest": false,
@@ -110,6 +84,35 @@
 			"ref": "",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
-		"": {}
+		"1.10.8": {
+			"majorversion": "1.10",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.11.13": {
+			"majorversion": "1.11",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.12.17": {
+			"majorversion": "1.12",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.13.10": {
+			"majorversion": "1.13",
+			"latest": false,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"1.14.2": {
+			"majorversion": "1.14",
+			"latest": true,
+			"ref": "",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		}
 	}
 }
