@@ -30,7 +30,6 @@
 			"default": "/usr/local/go/bin/go",
 			"go": "/usr/local/go/bin/go",
 			"gofmt": "/usr/local/go/bin/gofmt"
-
 		}
 	},
 	"project": {
