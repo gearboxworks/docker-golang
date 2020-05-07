@@ -102,8 +102,9 @@ Running golang Gearbox container default command. If a container has a default i
 `./launch golang:1.6.4 -flag1 -flag2 variable`
 
 Gearbox containers may have multiple executables that can be run. The golang Gearbox container has the following available commands:
-- The default command will execute `go` within the container.
-- `go` - will execute `go` within the container.
+- The default command will execute `/usr/local/go/bin/go` within the container.
+- `go` - will execute `/usr/local/go/bin/go` within the container.
+- `gofmt` - will execute `/usr/local/go/bin/gofmt` within the container.
 
 
 ### Remote connection

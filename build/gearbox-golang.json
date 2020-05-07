@@ -27,8 +27,9 @@
 	},
 	"run": {
 		"commands": {
-			"default": "go",
-			"go": "go"
+			"default": "/usr/local/go/bin/go",
+			"go": "/usr/local/go/bin/go",
+			"gofmt": "/usr/local/go/bin/gofmt"
 		}
 	},
 	"project": {
