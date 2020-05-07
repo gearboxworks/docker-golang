@@ -1,7 +1,7 @@
 
 ################################################################################
 # WARNING: This file has been auto-generated. DO NOT EDIT: WARNING
-# Created on 2020-05-07T15:41:21+1000, using template:DockerfileRuntime.tmpl and json:gearbox.json
+# Created on 2020-05-07T16:04:16+1000, using template:DockerfileRuntime.tmpl and json:gearbox.json
 # Plain Docker container for docker-golang based off gearboxworks/gearbox-base:alpine-3.11
 
 ARG VERSION=1.6.4
