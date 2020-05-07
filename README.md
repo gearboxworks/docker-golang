@@ -80,13 +80,13 @@ Create, and start the golang Gearbox container. Run a shell.
 
 `./launch shell golang`
 
-Create, and start the golang Gearbox container with version 1.3.3 and run a shell.
+Create, and start the golang Gearbox container with version 1.7.6 and run a shell.
 
-`./launch shell golang:1.3.3`
+`./launch shell golang:1.7.6`
 
-`./launch shell golang:1.3.3 ls -l`
+`./launch shell golang:1.7.6 ls -l`
 
-`./launch shell golang:1.3.3 ps -eaf`
+`./launch shell golang:1.7.6 ps -eaf`
 
 
 ### Available commands
@@ -99,7 +99,7 @@ Running golang Gearbox container default command. If a container has a default i
 
 `./golang -flag1 -flag2 variable`
 
-`./launch golang:1.3.3 -flag1 -flag2 variable`
+`./launch golang:1.7.6 -flag1 -flag2 variable`
 
 Gearbox containers may have multiple executables that can be run. The golang Gearbox container has the following available commands:
 - The default command will execute `/usr/local/go/bin/go` within the container.

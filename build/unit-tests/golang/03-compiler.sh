@@ -1,10 +1,14 @@
 #!/bin/bash -l
 
+p_info "golang" "Check GoLang version."
+GOBIN="$(which go)"
+${GOBIN} version; checkExit
+
+
 p_info "golang" "Compiler test started."
-
-
 rm -rf /tmp/golang-test
 mkdir /tmp/golang-test && cd /tmp/golang-test
+
 cat <<EOF > main.go
 package main
 
