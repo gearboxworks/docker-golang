@@ -35,4 +35,10 @@ else
 	/usr/local/go/bin/go version; checkExit
 fi
 
+
+cd /usr/local/bin/
+URL="https://github.com/goreleaser/goreleaser/releases/download/v0.135.0/goreleaser_Linux_x86_64.tar.gz"
+wget -qO- --no-check-certificate ${URL} | tar zxvf - goreleaser; checkExit
+chmod a+x goreleaser; checkExit
+
 c_ok "Finished."
