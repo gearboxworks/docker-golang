@@ -41,4 +41,19 @@ URL="https://github.com/goreleaser/goreleaser/releases/download/v0.135.0/gorelea
 wget -qO- --no-check-certificate ${URL} | tar zxvf - goreleaser; checkExit
 chmod a+x goreleaser; checkExit
 
+id
+
+su - gearbox -c '
+/usr/local/go/bin/go get golang.org/x/tools/cmd/godoc
+/usr/local/go/bin/go get golang.org/x/tools/cmd/godex
+/usr/local/go/bin/go get golang.org/x/tools/cmd/goimports
+/usr/local/go/bin/go get golang.org/x/tools/cmd/gomvpkg
+/usr/local/go/bin/go get golang.org/x/tools/cmd/gorename
+/usr/local/go/bin/go get golang.org/x/tools/cmd/gotype
+/usr/local/go/bin/go get golang.org/x/tools/cmd/goyacc
+/usr/local/go/bin/go get golang.org/x/tools/cmd/guru
+/usr/local/go/bin/go get golang.org/x/tools/cmd/compilebench
+/usr/local/go/bin/go get golang.org/x/tools/cmd/benchcmp
+'
+
 c_ok "Finished."

@@ -11,7 +11,7 @@
 	},
 	"build": {
 		"ports": {
-
+			"godoc": "6060",
 			"https": "443",
 			"http": "80"
 		},
@@ -29,7 +29,18 @@
 		"commands": {
 			"default": "/usr/local/go/bin/go",
 			"go": "/usr/local/go/bin/go",
-			"gofmt": "/usr/local/go/bin/gofmt"
+			"gofmt": "/usr/local/go/bin/gofmt",
+			"goreleaser": "/usr/local/bin/goreleaser",
+			"benchcmp": "/home/gearbox/go/bin/benchcmp",
+			"compilebench": "/home/gearbox/go/bin/compilebench",
+			"godex": "/home/gearbox/go/bin/godex",
+			"godoc": "/home/gearbox/go/bin/godoc",
+			"goimports": "/home/gearbox/go/bin/goimports",
+			"gomvpkg": "/home/gearbox/go/bin/gomvpkg",
+			"gorename": "/home/gearbox/go/bin/gorename",
+			"gotype": "/home/gearbox/go/bin/gotype",
+			"goyacc": "/home/gearbox/go/bin/goyacc",
+			"guru": "/home/gearbox/go/bin/guru"
 		}
 	},
 	"project": {
